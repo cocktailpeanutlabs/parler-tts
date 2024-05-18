@@ -6,7 +6,9 @@ module.exports = async (kernel) => {
       params: {
         path: "app",
         venv: "env",
-        env: { },
+        env: {
+          PYTORCH_ENABLE_MPS_FALLBACK: "1"
+        },
         message: [
           "python app.py",
         ],
